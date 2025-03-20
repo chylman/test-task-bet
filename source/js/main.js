@@ -1,5 +1,14 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {CustomSelect} from './modules/select/custom-select.js';
+import {
+  uploadFile,
+  uploadFileDrop,
+  uploadFileDropPreview,
+  uploadImage,
+  uploadImageDrop
+} from './modules/input-file/init-upload.js';
+import {initInputRange} from './modules/input-range/init-input-range.js';
 
 // ---------------------------------
 
@@ -16,7 +25,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    const select = new CustomSelect();
+    select.init();
     initModals();
+    uploadImage();
+    uploadFile();
+    uploadImageDrop();
+    uploadFileDrop();
+    uploadFileDropPreview();
+    initInputRange();
   });
 });
 

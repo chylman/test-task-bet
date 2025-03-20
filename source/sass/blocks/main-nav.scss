@@ -1,23 +1,39 @@
 .main-nav {
+  display: flex;
+  align-items: center;
+
   &__list {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
     margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
     padding: 0;
 
     list-style: none;
   }
 
   &__item {
-    margin-right: 20px;
   }
 
   &__link {
     color: $color-default-white;
+    transition: color $trans-default, opacity $trans-default;
+
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    @include hover-focus {
+      opacity: 0.6;
+    }
 
     &.is-active {
-      opacity: 0.6;
+      color: $color-accent;
+
+      @include hover-focus {
+        opacity: 1;
+      }
     }
   }
 

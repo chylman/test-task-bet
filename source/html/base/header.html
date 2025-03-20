@@ -2,12 +2,12 @@
   <div class="container">
     @@if (!context.index) {
       <a class="header__logo" href="index.html" aria-label="Переход на главную">
-        Логотип
+        <img src="../../img/content/logo.svg" alt="Логотип компании">
       </a>
     }
     @@if (context.index) {
       <span class="header__logo">
-        Логотип
+        <img src="../../img/content/logo.svg" alt="Логотип компании">
       </span>
     }
 
@@ -20,13 +20,16 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Бизнес</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>О нас</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Цены</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 3) { is-active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Оформить заказ</a>
           </li>
         </ul>
       </div>
