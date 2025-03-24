@@ -83,6 +83,11 @@
     right: 2rem;
     top: 2rem;
     z-index: 101;
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 
   &__toggle span {

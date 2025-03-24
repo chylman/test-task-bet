@@ -1130,6 +1130,7 @@ button,
   right: 2rem;
   top: 2rem;
   z-index: 101;
+  display: none;
 }
 
 .main-nav__toggle span {
@@ -2722,6 +2723,10 @@ button,
     justify-content: center;
     width: 100%;
     height: 100%;
+  }
+
+  .main-nav__toggle {
+    display: block;
   }
 
   .footer__wrapper {
