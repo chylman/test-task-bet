@@ -9,6 +9,7 @@ import {
   uploadImageDrop
 } from './modules/input-file/init-upload.js';
 import {initInputRange} from './modules/input-range/init-input-range.js';
+import {initMenuToggle} from "./modules/menu-toggle/init-menu-toggle.js";
 
 // ---------------------------------
 
@@ -34,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     uploadFileDrop();
     uploadFileDropPreview();
     initInputRange();
+    initMenuToggle();
   });
 });
 

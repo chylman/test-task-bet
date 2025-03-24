@@ -1,9 +1,14 @@
 .header {
+  z-index: 99;
   position: fixed;
   display: flex;
   width: 100%;
-  background-color: rgba($color-black-5, 0.9);;
+  background-color: rgba($color-black-5, 0.9);
   padding: 28px 0;
+
+  @include vp-1023 {
+    padding: 14px 0;
+  }
 
   .container {
     display: flex;
@@ -15,6 +20,12 @@
     margin: 0 20px 0 0;
     width: 247px;
     height: 35px;
+
+    @include vp-1023 {
+      margin: 0 10px 0 0;
+      width: 140px;
+      height: 30px;
+    }
 
     img {
       width: 100%;

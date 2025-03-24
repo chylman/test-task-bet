@@ -4,7 +4,16 @@
     column-gap: 20px;
     justify-content: center;
     margin: 0;
+    padding: 0;
     list-style: none;
+
+    @include vp-1023 {
+      column-gap: 10px;
+    }
+
+    @include vp-767 {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -34,11 +43,21 @@
     border-radius: 50%;
     background-color: $color-accent;
     border: 5px solid $color-accent-additional;
+
+    @include vp-1023 {
+      width: 70px;
+      height: 70px;
+    }
   }
 
-  &__icon {
+  &__icon-wrapper {
     width: 55px;
     height: 55px;
+
+    @include vp-1023 {
+      width: 25px;
+      height: 25px;
+    }
 
     svg {
       width: 100%;
@@ -51,6 +70,10 @@
     font-weight: 400;
     font-size: 16px;
     color: $color-default-white;
+
+    @include vp-1023 {
+      font-size: 12px;
+    }
   }
 
   &__dotted-group {
@@ -61,6 +84,14 @@
     transform: translate(calc(100% + 10px), -50%);
     display: flex;
     column-gap: 20px;
+
+    @include vp-1023 {
+      transform: translate(calc(100% + 12px), -50%);
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &__dot {
@@ -69,5 +100,10 @@
     height: 6px;
     border-radius: 50%;
     background-color: $color-gray;
+
+    @include vp-1023 {
+      width: 4px;
+      height: 4px;
+    }
   }
 }

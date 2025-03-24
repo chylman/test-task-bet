@@ -2,8 +2,16 @@
   position: relative;
   padding: 121px 0 151px 0;
 
+  @include vp-1023 {
+    padding: 60px 0 75px 0;
+  }
+
   .advantages {
     margin-bottom: 80px;
+
+    @include vp-1023 {
+      margin-bottom: 40px;
+    }
   }
 
   &__bg-wrapper {
@@ -30,6 +38,12 @@
     text-transform: uppercase;
     text-align: center;
     color: $color-default-white;
+
+    @include vp-1023 {
+      margin: 0 0 15px 0;
+      font-weight: 900;
+      font-size: 26px;
+    }
   }
 
   &__text {
@@ -38,5 +52,10 @@
     font-size: 18px;
     text-align: center;
     color: $color-gray-5;
+
+    @include vp-1023 {
+      margin: 0 0 40px 0;
+      font-size: 16px;
+    }
   }
 }

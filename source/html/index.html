@@ -145,7 +145,7 @@
             </ul>
           </div>
           <form action="#" class="form">
-            <div class="select custom-select" data-select>
+            <div class="form__select select custom-select" data-select>
               <span class="custom-select__error">some-error</span>
               <span class="custom-select__placeholder">Выберите тип системы</span>
               <button class="custom-select__button" type="button" aria-label="Выберите тип системы">
@@ -161,13 +161,15 @@
                 <li class="custom-select__item" tabindex="0" data-select-value="id-6">example-6</li>
               </ul>
             </div>
-            <div class="input-range" data-input-range>
+            <input class="form__input" type="email" name="email" id="form-email" placeholder="Ваш e-mail" aria-label="Ваш e-mail">
+            <input class="form__input" type="text" name="name" id="form-name" placeholder="Ваше имя" aria-label="Ваше имя">
+            <div class="form__input-range input-range" data-input-range>
               <span class="input-range__label">Sed ut perspiciatis, unde omnis iste natus</span>
               <span class="input-range__value" data-input-range-value></span>
               <div data-input-range-item></div>
             </div>
-            <div class="input-upload input-upload--file" data-upload="file" data-preview="false">
-              <label>
+            <div class="form__input-upload input-upload input-upload--file" data-upload="file" data-preview="false">
+              <label class="input-upload__label">
                 <input type="file" name="upload-file"/>
                 <span class="btn">
                   <svg class="btn__icon" width="17" height="20" aria-hidden="true">
@@ -177,7 +179,7 @@
                 </span>
               </label>
             </div>
-            <button class="button button--accent" type="submit">Отправить</button>
+            <button class="form__button-submit button button--accent button--wide" type="submit">Отправить</button>
           </form>
         </div>
       </section>

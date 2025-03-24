@@ -2,6 +2,27 @@
   display: flex;
   align-items: center;
 
+  &__wrapper {
+    @include vp-767 {
+      z-index: 100;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: $color-bg;
+      transform: translateX(100%);
+      transition: transform $trans-600;
+
+      pointer-events: none;
+    }
+  }
+
+  &.active .main-nav__wrapper {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -11,6 +32,18 @@
     padding: 0;
 
     list-style: none;
+
+    @include vp-1023 {
+      column-gap: 30px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__item {
@@ -35,9 +68,63 @@
         opacity: 1;
       }
     }
+
+    @include vp-1023 {
+      font-size: 10px;
+    }
   }
 
   &__toggle {
-    display: none;
+    background: none;
+    border: none;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    right: 2rem;
+    top: 2rem;
+    z-index: 101;
+  }
+
+  &__toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: $color-default-white;
+    border-radius: 12px;
+    display: block;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  &__toggle span::before,
+  &__toggle span::after {
+    content: "";
+    width: 100%;
+    background-color: $color-default-white;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    border-radius: 12px;
+    height: 2px;
+  }
+
+  &__toggle span::before {
+    transform: translateY(-10px);
+
+  }
+
+  &__toggle span::after {
+    transform: translateY(10px);
+    margin-top: -2px;
+  }
+
+
+  &__toggle.active span {
+    background-color: transparent;
+  }
+
+  &__toggle.active span::before {
+    transform: rotateZ(45deg) translateY(0);
+  }
+
+  &__toggle.active span::after {
+    transform: rotateZ(-45deg) translateY(0);
   }
 }
